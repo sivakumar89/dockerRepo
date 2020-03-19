@@ -5,5 +5,5 @@ before_install:
   - docker build -t siva/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run TEST npm run test -- --coverage
+  - docker run siva/docker-react npm run test -- --coverage
   
