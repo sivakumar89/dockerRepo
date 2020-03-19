@@ -9,7 +9,6 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           pls pls
-
         </p>
         <a
           className="App-link"
@@ -17,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React1
         </a>
       </header>
     </div>
