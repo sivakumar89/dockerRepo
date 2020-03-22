@@ -2,8 +2,19 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t siva/docker-react -f Dockerfile.dev .
+  - docker build -t TEST -f Dockerfile.dev .
 
 script:
-  - docker run siva/docker-react npm run test -- --coverage
+  - docker run TEST npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-157903408252" 
+  bucket_path: "docker"
+
+  on:
+    branch: master
   
